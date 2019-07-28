@@ -1,0 +1,260 @@
+@import "library/bootstrap/scss/bootstrap";
+
+$header-height: 250px;
+$service-margin: 120px;
+$page-header-height: 420px;
+
+body {
+    font-family:  cursive;
+}
+
+html {
+    font-family: cursive;
+}
+
+.page-header {
+    background-image: url('pics/cover/cover15.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: $page-header-height;
+
+    @include media-breakpoint-up(md) {
+        height: $page-header-height + 50px;
+    }
+    
+    @include media-breakpoint-up(lg) {
+        height: $page-header-height + 100px;
+    }
+    @include media-breakpoint-up(xl) {
+        height: $page-header-height + 150px;
+    }
+    
+    @media (min-width: 768px){
+            .navbar-expand-md .navbar-nav .nav-link {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    
+
+    
+    .navs {
+        //font-family: cursive;
+        color: rgb(1, 1, 10);
+    }
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+}
+
+.text-header {
+    background-color: transparent;
+    height: $header-height;
+
+    @include media-breakpoint-up(md) {
+        height: $header-height + 50px;
+    }
+    
+    @include media-breakpoint-up(lg) {
+        height: $header-height + 100px;
+    }
+    @include media-breakpoint-up(xl) {
+        height: $header-height + 150px;
+    }
+}
+
+.jumbotron {
+    h1 {
+        color: white;
+        text-shadow: 1px 1px 20px rgba(37, 37, 37, 0.8);
+    }
+
+    p {
+        color: rgb(251, 251, 255);
+        text-shadow: 0px 0px 10px rgba(37, 37, 37, 0.8);
+        margin-top: 15px;  
+        font-weight: bold;
+    }
+}
+
+.service {
+    h3 {
+        margin-top: $service-margin + 10px;
+    }
+
+    .service-icon {
+        font-size: 2rem;
+        color: #34b7a7;
+        border: solid 3px #34b7a7;
+        border-radius: 50%;
+        height: 3.5rem;
+        width: 3.5rem;
+        margin: 20px auto;
+        
+    }
+}
+
+.galery {
+    margin-top: $service-margin;
+    
+    background-color: rgb(228, 228, 240);
+    padding-top: $service-margin;
+    padding-bottom: $service-margin;
+ 
+}
+
+.aboutus {
+    padding-top: $service-margin;
+    padding-bottom: $service-margin;
+
+    .aboutus-image {
+        border-radius: 50%;
+        border: solid 5px rgb(228, 228, 240);
+    }
+
+    @include media-breakpoint-up(md) {
+        .aboutus-line {
+            background: linear-gradient(
+                to right,
+                white 0%,
+                white calc(50% - 1px),
+                rgb(228, 228, 240) calc(50% - 1px),
+                rgb(228, 228, 240) calc(50% + 1px),
+                white calc(50% + 1px),
+                white 100%
+                );
+        }
+    }
+    
+    .row:last-child {
+        background-color: white;
+    }
+}
+
+.team {
+    background-color: rgb(228, 228, 240);
+    padding-top: $service-margin;
+    padding-bottom: $service-margin;
+
+    img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: solid 4px white;
+        margin-top: 30px;
+    }
+
+    ul.social-network {
+        list-style: none;
+        display: inline;
+        margin-left:0 !important;
+        padding: 0;
+    }
+    ul.social-network li {
+        display: inline;
+        margin: 0 5px;
+    }
+    
+    
+    /* footer social icons */
+    .social-network a.icoRss:hover {
+        background-color: #F56505;
+    }
+    .social-network a.icoFacebook:hover {
+        background-color:#3B5998;
+    }
+    .social-network a.icoTwitter:hover {
+        background-color:#33ccff;
+    }
+    .social-network a.icoGoogle:hover {
+        background-color:#BD3518;
+    }
+    .social-network a.icoVimeo:hover {
+        background-color:#0590B8;
+    }
+    .social-network a.icoLinkedin:hover {
+        background-color:#007bb7;
+    }
+    .social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+    .social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+        color:#fff;
+    }
+    a.socialIcon:hover, .socialHoverClass {
+        color:#44BCDD;
+    }
+    
+    .social-circle li a {
+        display:inline-block;
+        position:relative;
+        margin:0 auto 0 auto;
+        border-radius:50%;
+        text-align:center;
+        width: 40px;
+        height: 40px;
+        font-size:20px;
+    }
+    .social-circle li i {
+        margin:0;
+        line-height:50px;
+        text-align: center;
+    }
+    
+    .social-circle li a:hover i, .triggeredHover {
+        transform: rotate(360deg);
+        transition: all 0.2s;
+    }
+    .social-circle i {
+        color: #fff;
+        transition: all 0.8s;
+    }
+    
+    a {
+     background-color: #D3D3D3;   
+    }
+
+}
+
+.contact {
+    padding-top: $service-margin;
+    padding-bottom: $service-margin;
+    background-color: rgb(20, 19, 19);
+    color: white;
+
+    @include media-breakpoint-up(md) {
+        .area-height {
+            height: 100%;
+        }
+    }
+}
+
+.footer {
+
+    p {
+        font-weight: bold;
+    }
+    i {
+        
+        background-color: rgb(20, 19, 19);
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        margin: 3px;
+        display: flex;
+    }
+
+    a:hover {
+        text-decoration: none;
+        background-color: rgb(221, 213, 213);
+        border-radius: 5px;
+        
+    }
+}
+
